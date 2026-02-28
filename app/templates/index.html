@@ -1,8 +1,87 @@
-{% extends "base.html" %}
+﻿{% extends "base.html" %}
 
-{% block title %}Trang chủ{% endblock %}
+{% block title %}Trang chủ | {{ site.brand.name }}{% endblock %}
+{% block extra_css %}<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">{% endblock %}
 
 {% block content %}
-<h1>Chào mừng đến với công ty</h1>
-<p>Giới thiệu ngắn về công ty.</p>
+<section class="home-hero">
+  <div class="container home-hero__inner">
+    <div class="home-hero__content">
+      <span class="home-hero__kicker">{{ site.home.hero.kicker }}</span>
+      <h1>{{ site.home.hero.title }}</h1>
+      <p>{{ site.home.hero.description }}</p>
+      <div class="home-hero__actions">
+        <a class="btn btn-primary" href="{{ site.home.hero.primary_button.href }}">{{ site.home.hero.primary_button.label }}</a>
+        <a class="btn btn-outline" href="{{ site.home.hero.secondary_button.href }}">{{ site.home.hero.secondary_button.label }}</a>
+      </div>
+    </div>
+    <div class="home-hero__cards">
+      {% for item in site.home.hero.stats %}
+        <article>
+          <h3>{{ item.value }}</h3>
+          <p>{{ item.label }}</p>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="home-section">
+  <div class="container">
+    <h2 class="section-title">{{ site.home.products.title }}</h2>
+    <p class="section-subtitle">{{ site.home.products.subtitle }}</p>
+    <div class="product-grid">
+      {% for item in site.home.products["items"] %}
+        <a class="product-card" href="{{ item.href }}">
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.description }}</p>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="home-section home-section--alt">
+  <div class="container capability">
+    <div>
+      <h2 class="section-title">{{ site.home.capability.title }}</h2>
+      <p class="section-subtitle">{{ site.home.capability.description }}</p>
+      <ul class="capability-list">
+        {% for item in site.home.capability.bullets %}
+          <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="capability-panel">
+      <h3>{{ site.home.capability.panel.title }}</h3>
+      <p>{{ site.home.capability.panel.description }}</p>
+      <a class="btn btn-primary" href="{{ site.home.capability.panel.button.href }}">{{ site.home.capability.panel.button.label }}</a>
+    </div>
+  </div>
+</section>
+
+<section class="home-section">
+  <div class="container">
+    <h2 class="section-title">{{ site.home.news.title }}</h2>
+    <div class="news-grid">
+      {% for item in site.home.news["items"] %}
+        <article class="news-card">
+          <span>{{ item.tag }}</span>
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.description }}</p>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="home-cta">
+  <div class="container home-cta__inner">
+    <div>
+      <h2>{{ site.home.cta.title }}</h2>
+      <p>{{ site.home.cta.description }}</p>
+    </div>
+    <a class="btn btn-primary" href="{{ site.home.cta.button.href }}">{{ site.home.cta.button.label }}</a>
+  </div>
+</section>
 {% endblock %}

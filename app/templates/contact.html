@@ -1,0 +1,13 @@
+﻿{% extends "base.html" %}
+
+{% block title %}Liên hệ | {{ site.brand.name }}{% endblock %}
+{% block extra_css %}<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">{% endblock %}
+
+{% block content %}
+<section class="home-section">
+  <div class="container">
+    <h1 class="section-title">Liên hệ</h1>
+    <p class="section-subtitle">Điện thoại: {{ site.footer.contact.phone_display }} | Email: {{ site.footer.contact.email }}</p>
+  </div>
+</section>
+{% endblock %}

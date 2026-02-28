@@ -1,18 +1,41 @@
-{% extends "base.html" %}
+﻿{% extends "base.html" %}
 
-{% block title %}Sản phẩm{% endblock %}
+{% block title %}Sản phẩm | {{ site.brand.name }}{% endblock %}
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/product.css') }}">
+{% endblock %}
 
 {% block content %}
-<h1>Danh sách sản phẩm</h1>
+<section class="home-section">
+  <div class="container">
+    <h1 class="section-title">Danh sách sản phẩm</h1>
+    <p class="section-subtitle">Các dòng sản phẩm có cùng cấu trúc hiển thị, khác nhau theo dữ liệu nội dung và hình ảnh.</p>
 
-<ul>
-    {% for product in products %}
-        <li>
-            <a href="/san-pham/{{ product.slug }}">
-                {{ product.name }}
-            </a>
-            - {{ product.price }} VND
-        </li>
-    {% endfor %}
-</ul>
+    <div class="product-page__filters">
+      <a class="product-page__filter {% if not active_category %}is-active{% endif %}" href="{{ url_for('product.products') }}">Tất cả</a>
+      {% for category in categories %}
+        <a class="product-page__filter {% if active_category == category.slug %}is-active{% endif %}" href="{{ url_for('product.products') }}?danh-muc={{ category.slug }}">{{ category.name }}</a>
+      {% endfor %}
+    </div>
+
+    <div class="product-grid">
+      {% for product in products %}
+        <a class="product-card" href="{{ url_for('product.product_detail', slug=product.slug) }}">
+          <h3>{{ product.name }}</h3>
+          <p>{{ product.short_description }}</p>
+          <p class="product-card__meta">Danh mục: {{ product.category_name }}</p>
+          {% if product.get('price') %}
+            <p><strong>{{ "{:,}".format(product.price) }} VND</strong></p>
+          {% endif %}
+        </a>
+      {% else %}
+        <div class="product-card">
+          <h3>Chưa có sản phẩm</h3>
+          <p>Danh mục này chưa có dữ liệu. Bạn có thể thêm mới trực tiếp trong site.json.</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
 {% endblock %}

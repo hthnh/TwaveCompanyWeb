@@ -1,10 +1,89 @@
-{% extends "base.html" %}
+﻿{% extends "base.html" %}
 
-{% block title %}{{ product.name }}{% endblock %}
+{% block title %}{{ product.name }} | {{ site.brand.name }}{% endblock %}
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/product.css') }}">
+{% endblock %}
 
 {% block content %}
-<h1>{{ product.name }}</h1>
-<p>{{ product.description }}</p>
-<p>Giá: {{ product.price }} VND</p>
-<a href="/san-pham">Quay lại</a>
+<section class="home-section">
+  <div class="container">
+    <a class="btn btn-outline" href="{{ url_for('product.products') }}">Quay lại danh sách</a>
+
+    <div class="product-detail">
+      <div class="product-detail__media">
+        <img src="{{ url_for('static', filename=product.hero_image) }}" alt="{{ product.name }}">
+
+        {% if product.gallery %}
+          <div class="product-gallery">
+            {% for image in product.gallery %}
+              <img src="{{ url_for('static', filename=image) }}" alt="{{ product.name }}">
+            {% endfor %}
+          </div>
+        {% endif %}
+      </div>
+
+      <div class="product-detail__content">
+        <h1 class="section-title">{{ product.name }}</h1>
+        <p class="section-subtitle">{{ product.short_description }}</p>
+
+        <div class="product-detail__meta">
+          <span class="product-detail__chip">SKU: {{ product.sku }}</span>
+          <span class="product-detail__chip">{{ product.category_name }}</span>
+        </div>
+
+        {% if product.get('price') %}
+          <p class="product-detail__price">{{ "{:,}".format(product.price) }} VND</p>
+        {% endif %}
+
+        {% if product.highlights %}
+          <ul class="product-detail__list">
+            {% for highlight in product.highlights %}
+              <li>{{ highlight }}</li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+
+        {% if product.specs %}
+          <div class="product-detail__section">
+            <h3>Thông số kỹ thuật</h3>
+            <div class="product-specs">
+              {% for spec in product.specs %}
+                <div class="product-specs__row">
+                  <div class="product-specs__label">{{ spec.label }}</div>
+                  <div class="product-specs__value">{{ spec.value }}</div>
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+        {% endif %}
+
+        {% for section in product.sections %}
+          <div class="product-detail__section">
+            <h3>{{ section.title }}</h3>
+            <p>{{ section.content }}</p>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    {% if related_products %}
+      <div class="related-products">
+        <h2 class="section-title">Sản phẩm liên quan</h2>
+        <div class="product-grid">
+          {% for item in related_products %}
+            <a class="product-card" href="{{ url_for('product.product_detail', slug=item.slug) }}">
+              <h3>{{ item.name }}</h3>
+              <p>{{ item.short_description }}</p>
+              {% if item.get('price') %}
+                <p><strong>{{ "{:,}".format(item.price) }} VND</strong></p>
+              {% endif %}
+            </a>
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
+  </div>
+</section>
 {% endblock %}

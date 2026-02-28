@@ -1,0 +1,69 @@
+﻿<footer class="site-footer">
+  <div class="container site-footer__top">
+    <div class="site-footer__col site-footer__col--company">
+      <a class="site-footer__logo" href="/" aria-label="{{ site.brand.name }} Home">
+        <img src="{{ url_for('static', filename=site.brand.logo) }}" alt="{{ site.brand.name }} logo">
+      </a>
+      <p class="site-footer__desc">{{ site.footer.description }}</p>
+    </div>
+
+    <div class="site-footer__col">
+      <h4 class="site-footer__title">Giới thiệu</h4>
+      <ul class="site-footer__list">
+        {% for item in site.menus.footer_intro %}
+          <li><a href="{{ item.href }}">{{ item.label }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="site-footer__col">
+      <h4 class="site-footer__title">Sản phẩm</h4>
+      <ul class="site-footer__list">
+        {% if site.product_categories %}
+          {% for category in site.product_categories %}
+            <li><a href="{{ url_for('product.products') }}?danh-muc={{ category.slug }}">{{ category.name }}</a></li>
+          {% endfor %}
+        {% else %}
+          {% for item in site.menus.footer_products %}
+            <li><a href="{{ item.href }}">{{ item.label }}</a></li>
+          {% endfor %}
+        {% endif %}
+      </ul>
+    </div>
+
+    <div class="site-footer__col">
+      <h4 class="site-footer__title">Liên hệ</h4>
+      <ul class="site-footer__contact-list">
+        <li><i class="fa-solid fa-location-dot" aria-hidden="true"></i><span>{{ site.footer.contact.address }}</span></li>
+        <li><i class="fa-solid fa-phone" aria-hidden="true"></i><a href="tel:{{ site.footer.contact.phone_tel }}">{{ site.footer.contact.phone_display }}</a></li>
+        <li><i class="fa-solid fa-envelope" aria-hidden="true"></i><a href="mailto:{{ site.footer.contact.email }}">{{ site.footer.contact.email }}</a></li>
+      </ul>
+
+      <form class="site-footer__newsletter" data-newsletter-form>
+        <label for="newsletter-email" class="site-footer__label">Đăng ký nhận tin</label>
+        <div class="site-footer__newsletter-controls">
+          <input id="newsletter-email" name="email" type="email" placeholder="Nhập email" required>
+          <button type="submit">Gửi</button>
+        </div>
+        <p class="site-footer__newsletter-msg" data-newsletter-msg aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+
+  <div class="site-footer__bottom">
+    <div class="container site-footer__bottom-inner">
+      <span>© <span data-current-year></span> {{ site.footer.copyright_holder }}. All rights reserved.</span>
+      <div class="site-footer__social">
+        {% for item in site.footer.social %}
+          <a href="{{ item.href }}" aria-label="{{ item.label }}">
+            {% if item.get('icon') %}
+              <i class="{{ item.icon }}" aria-hidden="true"></i>
+            {% else %}
+              {{ item.text }}
+            {% endif %}
+          </a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</footer>

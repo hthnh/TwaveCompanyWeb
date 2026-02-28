@@ -1,8 +1,46 @@
-<header>
-    <nav>
-        <a href="/">Trang chủ</a>
-        <a href="/gioi-thieu">Giới thiệu</a>
-        <a href="/san-pham">Sản phẩm</a>
-        <a href="/lien-he">Liên hệ</a>
+﻿<header class="site-header" data-header>
+  <div class="container site-header__inner">
+    <a class="site-header__logo" href="/" aria-label="{{ site.brand.name }} Home">
+      <img src="{{ url_for('static', filename=site.brand.logo) }}" alt="{{ site.brand.name }} logo">
+    </a>
+
+    <button class="site-header__toggle" type="button" aria-label="Mở menu" aria-expanded="false" aria-controls="primary-nav" data-menu-toggle>
+      <i class="fa-solid fa-bars" aria-hidden="true"></i>
+    </button>
+
+    <nav class="site-header__nav" id="primary-nav" data-nav>
+      <ul class="site-header__menu">
+        {% for item in site.menus.primary %}
+          {% set is_active = request.path == item.href or (item.get('match_prefix') and request.path.startswith(item.href)) %}
+          {% set children = site.product_categories if item.get('children_source') == 'product_categories' else item.get('children', []) %}
+          <li class="site-header__item {% if children %}has-children{% endif %}">
+            <a href="{{ item.href }}" class="site-header__link {% if is_active %}is-active{% endif %}">{{ item.label }}</a>
+
+            {% if children %}
+              <ul class="site-header__submenu">
+                {% for category in children %}
+                  <li>
+                    <a href="{{ url_for('product.products') }}?danh-muc={{ category.slug }}">{{ category.name }}</a>
+                  </li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
     </nav>
+
+    <div class="site-header__actions">
+      <button class="site-header__btn site-header__btn--ghost" type="button" aria-label="Tìm kiếm">
+        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+      </button>
+
+      <a class="site-header__btn site-header__btn--hotline" href="tel:{{ site.header.hotline_tel }}" aria-label="Gọi hotline">
+        <i class="fa-solid fa-phone" aria-hidden="true"></i>
+        <span>{{ site.header.hotline_display }}</span>
+      </a>
+
+      <button class="site-header__btn site-header__btn--ghost" type="button" aria-label="Switch language">{{ site.header.language_label }}</button>
+    </div>
+  </div>
 </header>

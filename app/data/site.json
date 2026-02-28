@@ -1,0 +1,458 @@
+﻿{
+  "brand": {
+    "name": "Twave",
+    "logo": "images/logo.png"
+  },
+  "menus": {
+    "primary": [
+      {
+        "label": "Giới thiệu",
+        "href": "/gioi-thieu"
+      },
+      {
+        "label": "Sản phẩm",
+        "href": "/san-pham",
+        "match_prefix": true,
+        "children_source": "product_categories"
+      },
+      {
+        "label": "Hỗ trợ",
+        "href": "#"
+      },
+      {
+        "label": "Tin tức",
+        "href": "#"
+      },
+      {
+        "label": "Liên hệ",
+        "href": "/lien-he"
+      }
+    ],
+    "footer_intro": [
+      {
+        "label": "Về công ty",
+        "href": "/gioi-thieu"
+      },
+      {
+        "label": "Lịch sử",
+        "href": "#"
+      },
+      {
+        "label": "Tầm nhìn",
+        "href": "#"
+      }
+    ],
+    "footer_products": []
+  },
+  "header": {
+    "hotline_display": "028 3969 0973",
+    "hotline_tel": "02839690973",
+    "language_label": "EN"
+  },
+  "home": {
+    "hero": {
+      "kicker": "Giải pháp vật liệu cho hạ tầng hiện đại",
+      "title": "Twave đồng hành cùng các công trình bền vững",
+      "description": "Tập trung vào năng lực sản xuất ổn định, kiểm soát chất lượng và dịch vụ kỹ thuật, chúng tôi cung cấp sản phẩm phù hợp cho dự án dân dụng, công nghiệp và hạ tầng đô thị.",
+      "primary_button": {
+        "label": "Xem danh mục sản phẩm",
+        "href": "/san-pham"
+      },
+      "secondary_button": {
+        "label": "Liên hệ tư vấn",
+        "href": "/lien-he"
+      },
+      "stats": [
+        {
+          "value": "20+",
+          "label": "Năm kinh nghiệm ngành vật liệu kỹ thuật"
+        },
+        {
+          "value": "500+",
+          "label": "Dự án đã triển khai toàn quốc"
+        },
+        {
+          "value": "ISO",
+          "label": "Quy trình sản xuất và kiểm định chuẩn hóa"
+        }
+      ]
+    },
+    "products": {
+      "title": "Nhóm sản phẩm chủ lực",
+      "subtitle": "Danh mục sản phẩm được phát triển cho nhu cầu thi công đa dạng và điều kiện vận hành khác nhau.",
+      "items": [
+        {
+          "title": "Hệ ống dân dụng",
+          "description": "Giải pháp cấp thoát nước cho nhà ở, công trình thương mại và khu dân cư.",
+          "href": "/san-pham"
+        },
+        {
+          "title": "Hệ ống công nghiệp",
+          "description": "Thiết kế cho yêu cầu lưu chất, áp lực cao và môi trường hóa chất đặc thù.",
+          "href": "/san-pham"
+        },
+        {
+          "title": "Phụ kiện đồng bộ",
+          "description": "Đảm bảo tính tương thích hệ thống, giảm rò rỉ và tối ưu tiến độ lắp đặt.",
+          "href": "/san-pham"
+        }
+      ]
+    },
+    "capability": {
+      "title": "Năng lực sản xuất và vận hành",
+      "description": "Nhà máy vận hành theo quy trình kiểm soát chất lượng nhiều lớp. Từ nguyên liệu, ép đùn đến kiểm định đầu ra đều được tiêu chuẩn hóa để đảm bảo độ ổn định sản phẩm.",
+      "bullets": [
+        "Dây chuyền công nghệ cập nhật, kiểm soát sai số nghiêm ngặt.",
+        "Đội kỹ thuật hỗ trợ chọn giải pháp theo từng dự án thực tế.",
+        "Chính sách hậu mãi rõ ràng và phản hồi nhanh cho nhà thầu."
+      ],
+      "panel": {
+        "title": "Hỗ trợ kỹ thuật theo dự án",
+        "description": "Tư vấn lựa chọn vật tư, cấu hình hệ thống và chuẩn thi công ngay từ giai đoạn thiết kế.",
+        "button": {
+          "label": "Đặt lịch tư vấn",
+          "href": "/lien-he"
+        }
+      }
+    },
+    "news": {
+      "title": "Tin tức và tài liệu",
+      "items": [
+        {
+          "tag": "Thông báo",
+          "title": "Cập nhật tiêu chuẩn vật liệu cho hệ thống cấp thoát nước",
+          "description": "Tổng hợp các điểm quan trọng để đội thi công và kỹ sư thiết kế dễ ứng dụng."
+        },
+        {
+          "tag": "Kỹ thuật",
+          "title": "So sánh nhanh PVC, HDPE và PP-R theo từng ứng dụng",
+          "description": "Hướng dẫn lựa chọn vật liệu đúng theo môi trường vận hành và bài toán chi phí."
+        },
+        {
+          "tag": "Case Study",
+          "title": "Tối ưu hệ thống ống cho dự án công nghiệp tại miền Nam",
+          "description": "Quy trình triển khai thực tế giúp giảm thời gian dừng vận hành."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Sẵn sàng trao đổi nhu cầu dự án của bạn",
+      "description": "Đội ngũ Twave sẽ phản hồi nhanh với đề xuất phù hợp về kỹ thuật và tiến độ.",
+      "button": {
+        "label": "Liên hệ ngay",
+        "href": "/lien-he"
+      }
+    }
+  },
+  "product_categories": [
+    {
+      "slug": "dan-dung",
+      "name": "Dân dụng",
+      "description": "Giải pháp đường ống cho nhà ở, toà nhà thương mại và khu dân cư."
+    },
+    {
+      "slug": "cong-nghiep",
+      "name": "Công nghiệp",
+      "description": "Sản phẩm chịu áp lực cao, phù hợp môi trường kỹ thuật khắt khe."
+    },
+    {
+      "slug": "phu-kien",
+      "name": "Phụ kiện",
+      "description": "Phụ kiện đồng bộ giúp thi công nhanh và đảm bảo độ kín."
+    },
+    {
+      "slug": "ha-tang-do-thi",
+      "name": "Hạ tầng đô thị",
+      "description": "Giải pháp ống và phụ trợ cho mạng lưới cấp thoát nước đô thị."
+    },
+    {
+      "slug": "nong-nghiep",
+      "name": "Nông nghiệp",
+      "description": "Sản phẩm chuyên dụng cho tưới tiêu, dẫn nước và phân phối ngoài đồng."
+    }
+  ],
+  "products": [
+    {
+      "slug": "ong-pvc-cao-cap",
+      "name": "Ống PVC cao cấp",
+      "category_slug": "dan-dung",
+      "short_description": "Giải pháp ống bền bỉ cho cấp thoát nước dân dụng.",
+      "thumbnail": "images/logo.png",
+      "hero_image": "images/logo.png",
+      "price": 980000,
+      "sku": "TW-PVC-001",
+      "highlights": [
+        "Chống ăn mòn, tuổi thọ cao.",
+        "Lắp đặt nhanh, tối ưu chi phí thi công.",
+        "Phù hợp hệ thống cấp thoát nước dân dụng."
+      ],
+      "specs": [
+        {
+          "label": "Dải đường kính",
+          "value": "21 - 114 mm"
+        },
+        {
+          "label": "Áp lực làm việc",
+          "value": "PN10 - PN16"
+        },
+        {
+          "label": "Tiêu chuẩn",
+          "value": "TCVN / ISO"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Ứng dụng",
+          "content": "Sử dụng cho hệ thống cấp thoát nước nhà ở, căn hộ, trường học và công trình thương mại quy mô vừa."
+        },
+        {
+          "title": "Lợi ích",
+          "content": "Trọng lượng nhẹ, dễ thi công và bảo trì, giúp giảm tải chi phí trong toàn bộ vòng đời dự án."
+        }
+      ],
+      "gallery": [
+        "images/logo.png"
+      ]
+    },
+    {
+      "slug": "ong-hdpe-cong-nghiep",
+      "name": "Ống HDPE công nghiệp",
+      "category_slug": "cong-nghiep",
+      "short_description": "Đáp ứng yêu cầu áp lực cao và môi trường vận hành khắc nghiệt.",
+      "thumbnail": "images/logo.png",
+      "hero_image": "images/logo.png",
+      "price": 1490000,
+      "sku": "TW-HDPE-014",
+      "highlights": [
+        "Khả năng chịu va đập và đàn hồi tốt.",
+        "Hiệu quả trong hệ thống công nghiệp liên tục.",
+        "Kháng hóa chất trong nhiều điều kiện vận hành."
+      ],
+      "specs": [
+        {
+          "label": "Dải đường kính",
+          "value": "63 - 315 mm"
+        },
+        {
+          "label": "Áp lực làm việc",
+          "value": "PN8 - PN20"
+        },
+        {
+          "label": "Nhiệt độ vận hành",
+          "value": "-20 đến 60°C"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Ứng dụng",
+          "content": "Phù hợp cho nhà máy xử lý nước, khu công nghiệp, hệ thống cấp nguyên liệu và hạ tầng kỹ thuật ngoài trời."
+        },
+        {
+          "title": "Lợi ích",
+          "content": "Độ bền cơ học cao, giúp giảm rủi ro rò rỉ và duy trì lưu lượng ổn định trong thời gian dài."
+        }
+      ],
+      "gallery": [
+        "images/logo.png"
+      ]
+    },
+    {
+      "slug": "phu-kien-ppr",
+      "name": "Phụ kiện PP-R",
+      "category_slug": "phu-kien",
+      "short_description": "Phụ kiện đồng bộ, đảm bảo kết nối kín và ổn định.",
+      "thumbnail": "images/logo.png",
+      "hero_image": "images/logo.png",
+      "price": 420000,
+      "sku": "TW-PPR-102",
+      "highlights": [
+        "Đa dạng co, tê, van, đầu nối.",
+        "Tương thích nhiều hệ đường ống tiêu chuẩn.",
+        "Giảm thời gian căn chỉnh tại hiện trường."
+      ],
+      "specs": [
+        {
+          "label": "Vật liệu",
+          "value": "PP-R nguyên sinh"
+        },
+        {
+          "label": "Dải kích thước",
+          "value": "20 - 90 mm"
+        },
+        {
+          "label": "Tiêu chuẩn",
+          "value": "DIN / ISO"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Ứng dụng",
+          "content": "Dùng cho hệ thống cấp nước nóng lạnh, hệ dân dụng và các cụm phụ trợ trong công nghiệp nhẹ."
+        },
+        {
+          "title": "Lợi ích",
+          "content": "Giúp hệ thống đồng bộ, tăng độ kín mối nối và giảm lỗi thi công trong giai đoạn lắp đặt."
+        }
+      ],
+      "gallery": [
+        "images/logo.png"
+      ]
+    },
+    {
+      "slug": "ong-upvc-thoat-nuoc",
+      "name": "Ống uPVC thoát nước",
+      "category_slug": "ha-tang-do-thi",
+      "short_description": "Ống thoát nước uPVC cho tuyến chính và tuyến nhánh đô thị.",
+      "thumbnail": "images/logo.png",
+      "hero_image": "images/logo.png",
+      "price": 1180000,
+      "sku": "TW-UPVC-221",
+      "highlights": [
+        "Độ cứng vòng cao, hạn chế biến dạng.",
+        "Khả năng chống ăn mòn tốt trong môi trường ngầm.",
+        "Đa dạng phụ kiện nối cho thi công ngoài hiện trường."
+      ],
+      "specs": [
+        {
+          "label": "Dải đường kính",
+          "value": "90 - 400 mm"
+        },
+        {
+          "label": "Chiều dài tiêu chuẩn",
+          "value": "4 m / 6 m"
+        },
+        {
+          "label": "Kiểu nối",
+          "value": "Ron cao su / Keo dán"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Ứng dụng",
+          "content": "Phù hợp mạng lưới thoát nước mưa và nước thải trong khu dân cư, khu đô thị mới và công trình hạ tầng."
+        },
+        {
+          "title": "Lợi ích",
+          "content": "Giảm chi phí bảo trì nhờ tuổi thọ cao và khả năng chịu tác động môi trường tốt."
+        }
+      ],
+      "gallery": [
+        "images/logo.png",
+        "images/logo.png"
+      ]
+    },
+    {
+      "slug": "ong-pe-tuoi-nho-giot",
+      "name": "Ống PE tưới nhỏ giọt",
+      "category_slug": "nong-nghiep",
+      "short_description": "Giải pháp dẫn nước tiết kiệm cho hệ thống tưới nông nghiệp chính xác.",
+      "thumbnail": "images/logo.png",
+      "hero_image": "images/logo.png",
+      "price": 560000,
+      "sku": "TW-PE-DRIP-09",
+      "highlights": [
+        "Giảm thất thoát nước trong quá trình tưới.",
+        "Tương thích nhiều đầu nhỏ giọt phổ biến.",
+        "Dễ lắp đặt và mở rộng tuyến tưới."
+      ],
+      "specs": [
+        {
+          "label": "Đường kính ngoài",
+          "value": "16 / 20 mm"
+        },
+        {
+          "label": "Áp lực làm việc",
+          "value": "PN4 - PN6"
+        },
+        {
+          "label": "Cuộn tiêu chuẩn",
+          "value": "100 m / 200 m"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Ứng dụng",
+          "content": "Dùng cho nhà kính, trang trại rau màu, cây ăn trái và vùng trồng có yêu cầu tưới chính xác."
+        },
+        {
+          "title": "Lợi ích",
+          "content": "Tăng hiệu quả tưới, tiết kiệm nhân công và hỗ trợ kiểm soát độ ẩm đất ổn định."
+        }
+      ],
+      "gallery": [
+        "images/logo.png",
+        "images/logo.png",
+        "images/logo.png"
+      ]
+    },
+    {
+      "slug": "van-khoa-bi-cong-nghiep",
+      "name": "Van khóa bi công nghiệp",
+      "category_slug": "phu-kien",
+      "short_description": "Van bi chịu áp lực cho hệ thống phân phối nước và lưu chất kỹ thuật.",
+      "thumbnail": "images/logo.png",
+      "hero_image": "images/logo.png",
+      "price": 890000,
+      "sku": "TW-BV-330",
+      "highlights": [
+        "Đóng mở nhanh, vận hành ổn định.",
+        "Kín nước cao, giảm rò rỉ tại điểm nối.",
+        "Tương thích hệ đường ống PVC/HDPE/PP-R."
+      ],
+      "specs": [
+        {
+          "label": "Kích thước danh nghĩa",
+          "value": "DN25 - DN110"
+        },
+        {
+          "label": "Áp lực danh nghĩa",
+          "value": "PN10 - PN16"
+        },
+        {
+          "label": "Nhiệt độ làm việc",
+          "value": "0 - 60°C"
+        }
+      ],
+      "sections": [
+        {
+          "title": "Ứng dụng",
+          "content": "Sử dụng cho hệ thống cấp nước, trạm bơm, cụm kỹ thuật và các tuyến nhánh cần thao tác thường xuyên."
+        },
+        {
+          "title": "Lợi ích",
+          "content": "Giúp cô lập tuyến nhanh khi bảo trì, giảm thời gian dừng hệ thống."
+        }
+      ],
+      "gallery": [
+        "images/logo.png"
+      ]
+    }
+  ],
+  "footer": {
+    "description": "Tân Hưng chuyên cung cấp giải pháp vật liệu và sản phẩm phục vụ công trình dân dụng, công nghiệp và hạ tầng.",
+    "contact": {
+      "address": "240 abc, Bình Tân, TP.HCM",
+      "phone_display": "028 3969 0973",
+      "phone_tel": "02839690973",
+      "email": "hello@twave.vn"
+    },
+    "social": [
+      {
+        "label": "Facebook",
+        "href": "#",
+        "icon": "fa-brands fa-facebook-f"
+      },
+      {
+        "label": "YouTube",
+        "href": "#",
+        "icon": "fa-brands fa-youtube"
+      },
+      {
+        "label": "Zalo",
+        "href": "#",
+        "text": "Zalo"
+      }
+    ],
+    "copyright_holder": "Tan Hung Company"
+  }
+}
