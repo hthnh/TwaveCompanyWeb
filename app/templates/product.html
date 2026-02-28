@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}Sản phẩm{% endblock %}
+
+{% block content %}
+<h1>Danh sách sản phẩm</h1>
+
+<ul>
+    {% for product in products %}
+        <li>
+            <a href="/san-pham/{{ product.slug }}">
+                {{ product.name }}
+            </a>
+            - {{ product.price }} VND
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}
