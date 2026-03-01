@@ -1,13 +1,51 @@
 ﻿{% extends "base.html" %}
 
 {% block title %}Giới thiệu | {{ site.brand.name }}{% endblock %}
-{% block extra_css %}<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">{% endblock %}
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/company.css') }}">
+{% endblock %}
 
 {% block content %}
-<section class="home-section">
+<section class="home-section company-page">
   <div class="container">
-    <h1 class="section-title">Giới thiệu {{ site.brand.name }}</h1>
-    <p class="section-subtitle">Trang đang được hoàn thiện. Bạn có thể bắt đầu từ trang chủ và danh mục sản phẩm.</p>
+    <h1 class="section-title">{{ site.about.title }}</h1>
+    <p class="section-subtitle">{{ site.about.subtitle }}</p>
+
+    <div class="company-grid" id="nang-luc">
+      {% for item in site.about.highlights %}
+        <article class="company-card">
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.description }}</p>
+        </article>
+      {% endfor %}
+    </div>
+
+    <section class="company-timeline-wrap">
+      <h2 class="section-title">Cột mốc phát triển</h2>
+      <div class="company-timeline">
+        {% for item in site.about.timeline %}
+          <article class="timeline-item">
+            <span class="timeline-item__year">{{ item.year }}</span>
+            <p>{{ item.text }}</p>
+          </article>
+        {% endfor %}
+      </div>
+    </section>
+
+    {% if site.about.capabilities %}
+    <section class="company-capability-wrap">
+      <h2 class="section-title">{{ site.about.capability_title }}</h2>
+      <div class="company-grid">
+        {% for item in site.about.capabilities %}
+          <article class="company-card company-card--capability">
+            <h3>{{ item.title }}</h3>
+            <p>{{ item.description }}</p>
+          </article>
+        {% endfor %}
+      </div>
+    </section>
+    {% endif %}
   </div>
 </section>
 {% endblock %}

@@ -1,0 +1,139 @@
+﻿.company-page {
+  padding-top: 56px;
+}
+
+.company-grid {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.company-card {
+  background: #fff;
+  border: 1px solid #e0e8f4;
+  border-radius: 14px;
+  padding: 20px;
+}
+
+.company-card h3 {
+  font-size: 20px;
+}
+
+.company-card p {
+  margin-top: 10px;
+  color: #4f5e75;
+  line-height: 1.7;
+}
+
+.company-card--capability {
+  border-color: #d7e4f8;
+  background: linear-gradient(180deg, #ffffff 0%, #f7faff 100%);
+}
+
+.company-timeline-wrap {
+  margin-top: 36px;
+}
+
+.company-capability-wrap {
+  margin-top: 36px;
+}
+
+.company-timeline {
+  margin-top: 18px;
+  display: grid;
+  gap: 12px;
+}
+
+.timeline-item {
+  border-left: 4px solid #0e4d92;
+  background: #fff;
+  border-radius: 10px;
+  padding: 14px 16px;
+}
+
+.timeline-item__year {
+  display: inline-block;
+  font-weight: 800;
+  color: #0e4d92;
+  margin-bottom: 6px;
+}
+
+.timeline-item p {
+  color: #4f5e75;
+}
+
+.contact-layout {
+  margin-top: 26px;
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  gap: 18px;
+}
+
+.contact-main {
+  display: grid;
+  gap: 16px;
+}
+
+.contact-box,
+.contact-note {
+  background: #fff;
+  border: 1px solid #e0e8f4;
+  border-radius: 14px;
+  padding: 20px;
+}
+
+.contact-box h3,
+.contact-note h3 {
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.contact-box p,
+.contact-note p,
+.contact-note li,
+.contact-department p {
+  color: #4f5e75;
+  line-height: 1.7;
+}
+
+.contact-departments {
+  display: grid;
+  gap: 12px;
+}
+
+.contact-department {
+  border-top: 1px dashed #d7e1f0;
+  padding-top: 10px;
+}
+
+.contact-department:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+
+.contact-department h4 {
+  margin: 0;
+  font-size: 17px;
+}
+
+.contact-note ul {
+  margin: 8px 0 0;
+  padding-left: 18px;
+}
+
+@media (max-width: 1024px) {
+  .company-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .company-grid {
+    grid-template-columns: 1fr;
+  }
+}

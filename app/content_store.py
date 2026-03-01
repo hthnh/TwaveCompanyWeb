@@ -51,6 +51,17 @@ DEFAULT_SITE_CONTENT = {
             "button": {"label": "", "href": "#"}
         }
     },
+    "about": {
+        "title": "",
+        "subtitle": "",
+        "highlights": [],
+        "timeline": []
+    },
+    "contact": {
+        "title": "",
+        "subtitle": "",
+        "departments": []
+    },
     "product_categories": [],
     "products": [],
     "footer": {
